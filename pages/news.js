@@ -4,7 +4,7 @@ export default function News() {
   return (
     <div>
       <Head>
-        <title>Shop</title>
+        <title>News</title>
         <meta name="description" content="News" />
       </Head>
 

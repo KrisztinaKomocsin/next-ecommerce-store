@@ -26,7 +26,7 @@ const homePageStyle = css`
     text-align: center;
     position: absolute;
     top: 150px;
-    right: 140px;
+    right: 150px;
     letter-spacing: 3px;
     line-height: 2;
   }
@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Home Page</title>
+        <title>Home</title>
         <meta name="description" content="Home Page" />
       </Head>
 
@@ -60,10 +60,15 @@ export default function Home() {
             Her hobbies include baking cookies and making new friends.
             <br /> As she always says, "you can never have too many friends!"
             <br /> <br /> <br />
-            Hello Kitty has no mouth, as they want people to "project their
-            feelings <br /> onto the character" and "be happy or sad together
-            with Hello Kitty. <br /> <br />
-            <strong>HOW SWEET THIS IS!</strong>
+            She may only be as tall as five apples and weighs the same as three,
+            <br />
+            but her influence spans the world over since she first debuted in
+            Japan in 1974. <br />
+            <br />
+            Hello Kitty has no mouth, as she wants people to "project their
+            feelings <br /> onto her character" and "be happy or sad together
+            with her. <br /> <br />
+            <strong>HOW SWEET!</strong>
           </p>
         </div>
       </div>
