@@ -12,6 +12,7 @@ const productStyle = css`
   justify-content: space-around;
   font-size: 30px;
   font-weight: bold;
+  background-color: #fadde1;
 `;
 
 export default function Shop(props) {

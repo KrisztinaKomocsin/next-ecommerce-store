@@ -4,9 +4,9 @@ import Link from 'next/link';
 import cart from '../public/cart.jpg';
 
 const headerStyles = css`
-  background-color: #bc85a3;
+  background-color: #cdb4db;
   width: 100vw;
-  height: 80px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
