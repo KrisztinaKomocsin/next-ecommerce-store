@@ -3,13 +3,16 @@ import { productsDatabase } from '../../util/database';
 
 export default function Product(props) {
   return (
-    <div>
-      <h1>{props.product.name}</h1>
-      <div>
+    <div css={contentWrapper}>
+      <div css={contentBox}></div>
+        <h1>{props.product.name}</h1>
         <div>
-          <Image src={`/${props.product.id}.jpg`} width="600" height="600" />
+          <div>
+            <Image src={`/${props.product.id}.jpg`} width="600" height="600" />
+          </div>
         </div>
-      </div>
+        <div css={contentDescription}
+        </div>
     </div>
   );
 }
