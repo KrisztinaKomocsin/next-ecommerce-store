@@ -73,6 +73,10 @@ const buttonStyle = css`
   font-weight: bold;
   color: #571089;
   background-color: #fadde1;
+
+  :hover {
+    box-shadow: inset 0 0 0 2em #cdb4db;
+  }
 `;
 
 const backToShopping = css`
@@ -81,6 +85,22 @@ const backToShopping = css`
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: bold;
   color: #571089;
+`;
+
+const inputButton = css`
+  position: absolute;
+  bottom: -67px;
+  right: 65px;
+  color: #571089;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  width: 60px;
+  height: 40px;
+  border: #571089 3px solid;
+  border-radius: 30px;
+  text-align: center;
+  background-color: #fadde1;
 `;
 
 export default function Product(props) {
@@ -111,6 +131,14 @@ export default function Product(props) {
         <div css={productButton}>
           <div css={priceStyle}>{props.product.price} €</div>
           <button css={buttonStyle}>Add To Bag</button>
+          <input
+            css={inputButton}
+            class="quantity"
+            min="0"
+            name="quantity"
+            value="1"
+            type="number"
+          />
         </div>
       </div>
     </div>
