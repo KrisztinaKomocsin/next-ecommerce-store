@@ -1,3 +1,4 @@
+/* eslint-disable react/void-dom-elements-no-children */
 /* eslint-disable @upleveled/upleveled/no-unnecessary-interpolations */
 import { css } from '@emotion/react';
 import Head from 'next/head';
@@ -9,6 +10,7 @@ const singlePageStyle = css`
   width: 100vw;
   min-height: 100vh;
   background-color: #fadde1;
+  position: relative;
 
   h1 {
     margin-top: 0;
@@ -29,11 +31,57 @@ const singleImage = css`
   border-radius: 50px;
 `;
 
-/*const singleProduct = css`
-  padding: 0 2rem;
-  font-size: 1rem;
-  border-left: 3px solid #ffc0cb;
-`;*/
+const singleProductBox = css`
+  position: absolute;
+  top: 80px;
+  right: 200px;
+  width: 400px;
+  color: #571089;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  letter-spacing: 3px;
+  line-height: 2;
+`;
+
+const productButton = css`
+  position: absolute;
+  bottom: 150px;
+  right: 270px;
+  color: #571089;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  width: 200px;
+  height: 60px;
+  border: #571089 3px solid;
+  border-radius: 30px;
+  text-align: center;
+`;
+
+const priceStyle = css`
+  padding: 10px;
+`;
+
+const buttonStyle = css`
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-transform: none;
+  border: #571089 3px solid;
+  border-radius: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: #571089;
+  background-color: #fadde1;
+`;
+
+const backToShopping = css`
+  margin-top: 50px;
+  padding-left: 200px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: #571089;
+`;
 
 export default function Product(props) {
   return (
@@ -53,10 +101,17 @@ export default function Product(props) {
             height="500"
           />
         </div>
-        <div>
-          <span>{props.product.price} €</span>
+        <div css={backToShopping}>
+          <Link href="/shop/">Back to Shopping</Link>
         </div>
-        <Link href="/shop/">Back to Shopping</Link>
+        <div css={singleProductBox}>
+          <h3>DETAILS</h3>
+          <p>{props.product.description}</p>
+        </div>
+        <div css={productButton}>
+          <div css={priceStyle}>{props.product.price} €</div>
+          <button css={buttonStyle}>Add To Bag</button>
+        </div>
       </div>
     </div>
   );
